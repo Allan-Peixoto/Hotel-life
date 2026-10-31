@@ -1,0 +1,231 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 20px;
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url("../imagens/01_cabana_floresta_fogueira.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: rgb(255, 233, 110);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: fantasy;
+    text-decoration: underline;
+    color: rgb(255, 233, 110);
+
+    font-size: clamp(26px, 5vw, 40px);
+    overflow-wrap: break-word;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 400px;
+    min-height: 360px;
+    height: auto;
+
+    margin: 50px auto;
+    padding: 25px 20px;
+
+    background-color: rgba(82, 38, 9, 0.94);
+
+    text-align: center;
+    border: 3px solid rgb(7, 7, 7);
+    border-radius: 12px;
+
+    color: rgb(255, 233, 110);
+}
+
+#log {
+    text-decoration: underline;
+    text-decoration-color: rgb(90, 43, 4);
+    text-decoration-style: solid;
+    opacity: 1;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+    min-height: 42px;
+
+    padding: 10px;
+    margin: 8px 0;
+
+    border: 2px solid rgb(155, 79, 17);
+    border-radius: 7px;
+
+    background-color: white;
+    color: #181717;
+
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid rgb(255, 233, 110);
+    outline-offset: 2px;
+}
+
+#enviar {
+    width: 100%;
+    max-width: 220px;
+
+    padding: 13px;
+    margin-top: 12px;
+
+    border: 2px solid rgb(155, 79, 17);
+    border-radius: 5px;
+
+    background-color: rgb(90, 43, 4);
+    color: rgb(255, 233, 110);
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: background-color 0.3s ease,
+                border-radius 0.3s ease;
+}
+
+#enviar:hover {
+    background-color: rgb(120, 59, 12);
+    border-radius: 15px;
+}
+
+button {
+    max-width: 100%;
+    padding: 12px 18px;
+
+    background-color: rgb(90, 43, 4);
+    color: rgb(255, 233, 110);
+
+    border: 2px solid rgb(155, 79, 17);
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                border-radius 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(120, 59, 12);
+    border-radius: 15px;
+}
+
+
+h4 {
+    color: rgb(255, 233, 110);
+    overflow-wrap: break-word;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 18px;
+        background-attachment: scroll;
+    }
+
+    div {
+        max-width: 420px;
+        min-height: 340px;
+        margin-top: 35px;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    div {
+        width: 100%;
+        max-width: 360px;
+
+        min-height: 320px;
+        margin-top: 25px;
+        padding: 22px 15px;
+
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    #enviar {
+        max-width: 100%;
+        padding: 13px;
+    }
+
+    button {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 8px;
+    }
+
+    div {
+        padding: 18px 10px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    input,
+    button,
+    #enviar {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
